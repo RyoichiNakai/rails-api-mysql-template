@@ -1,23 +1,44 @@
 version: '3.7'
 
 services:
+
   db:
+
     image: mysql:5.7
-    env_file: ./mysql/.env
+
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    
     ports: 
       - "3306:3306"
+
     volumes: 
       - "./mysql/data/:/var/lib/mysql"
       - "./mysql/my.cnf:/etc/mysql/conf.d/my.cnf"
     
   api:
+
     build: ./api/
+
     tty: true
+
     depends_on: 
       - db
+
     volumes:
       - ./api/:/myapp
+
     working_dir: /myapp
+
     ports:
       - "3000:3000"
+
+    environment:
+      APP_DATABASE: ${MYSQL_DATABASE}
+      APP_DATABASE_USER: ${MYSQL_USER}
+      APP_DATABASE_PASSWORD: ${MYSQL_PASSWORD}
+
     command: bash
