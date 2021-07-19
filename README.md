@@ -4,7 +4,7 @@
 
 Rails6.0のAPIモードとMySQL5.7を接続するためのDockerテンプレート
 
-## Docker環境構築
+## Docker環境構築&基本操作
 
 ### `.env`の作成
 
@@ -74,3 +74,48 @@ docker exec -it [Container ID] bash
 docker-compose down
 ```
 
+## Railsの操作
+
+### コンテナの中から操作
+
+- DBの生成（**初回`docker-compose up`時に必ず行うこと**）
+
+```zsh
+rails db:create
+```
+
+- サーバの起動
+
+```zsh
+rails s
+```
+
+- DBマイグレーション
+
+```zsh
+rails db:migrate
+```
+
+- モジュールをインストール
+
+```zsh
+bundle install
+```
+
+- モデルの作成
+
+```zsh
+rails g model {作成したいモデル名(単数系)}
+```
+
+- コントローラの作成
+
+```zsh
+rails g controller {作成したいコントローラ名(複数形)}
+```
+
+### コンテナの外から操作
+
+```zsh
+docker-compose run api {実行したRailsのコマンド}
+```
