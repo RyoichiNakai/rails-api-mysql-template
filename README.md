@@ -2,7 +2,7 @@
 
 ## 概要
 
-Rails6のAPIモードとMySQL5.7を接続するためのDockerテンプレート
+Rails6.0のAPIモードとMySQL5.7を接続するためのDockerテンプレート
 
 ## Docker環境構築
 
@@ -28,8 +28,8 @@ docker -v
 docker-compose -v
 ```
 
-`docker`が使えない場合は，[こちら](https://hub.docker.com/editions/community/docker-ce-desktop-mac) か`Docker for Desktop`をインストール  
-`docker-compose`を使えない場合は，以下のコマンドを使用して，インストールする
+`docker`が使えない場合は，[こちら](https://hub.docker.com/editions/community/docker-ce-desktop-mac) から`Docker for Desktop`をインストール  
+`docker-compose`を使えない場合は，以下のコマンドを使用して，インストール
 
 ```zsh
 brew install docker-compose
@@ -49,6 +49,28 @@ docker-compose build
 
 ### コンテナを立ち上げる
 
+コンテナの立ち上げ
+
 ```zsh
 docker-compose up
 ```
+
+コンテナの一覧を表示する  
+`Container ID`をコピーしておく
+
+```zsh
+docker ps -a
+```
+
+コンテナの中に入る
+
+```zsh
+docker exec -it [IMAGE_ID] bash
+```
+
+コンテナを停止する(`Docker for Desktop`でGUI上でコンテナやイメージを削除することも可能）
+
+```zsh
+docker-compose down
+```
+
