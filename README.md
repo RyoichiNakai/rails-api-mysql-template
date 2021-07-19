@@ -65,7 +65,7 @@ docker ps -a
 コンテナの中に入る
 
 ```zsh
-docker exec -it [IMAGE_ID] bash
+docker exec -it [Container ID] bash
 ```
 
 コンテナを停止する(`Docker for Desktop`でGUI上でコンテナやイメージを削除することも可能）
