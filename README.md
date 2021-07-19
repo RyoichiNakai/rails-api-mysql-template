@@ -45,7 +45,7 @@ docker-compose build
 # docker-compose build --no-cache
 ```
 
-後述の`docker-compose`時にビルドが走るので，しなくてもいい
+後述の`docker-compose up`時にビルドが走るので，しなくてもいい
 
 ### コンテナを立ち上げる
 
@@ -68,6 +68,8 @@ docker ps -a
 docker exec -it [Container ID] bash
 ```
 
+> 初回実行の際は，後述の**DBの生成**を必ず行うこと
+
 コンテナを停止する(`Docker for Desktop`でGUI上でコンテナやイメージを削除することも可能）
 
 ```zsh
@@ -88,6 +90,12 @@ rails db:create
 
 ```zsh
 rails s
+```
+
+- ルーティングの確認
+
+```zsh
+rails routes
 ```
 
 - DBマイグレーション
@@ -114,8 +122,17 @@ rails g model {作成したいモデル名(単数系)}
 rails g controller {作成したいコントローラ名(複数形)}
 ```
 
+- マイグレーションファイルの作成
+    - 詳しい説明は[こちら](https://pikawaka.com/rails/migration)
+    
+```zsh
+rails g migration {マイグレーションのクラス名}
+```
+
 ### コンテナの外から操作
 
 ```zsh
 docker-compose run api {実行したRailsのコマンド}
 ```
+
+## Rails APIについて
