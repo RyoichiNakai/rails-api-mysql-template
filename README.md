@@ -19,7 +19,8 @@ MYSQL_USER={MySQLユーザ名}
 MYSQL_PASSWORD={MySQLパスワード}
 ```
 
-`MYSQL_USER=root`としてしまうと　後述の`docker-compose`時に怒られるので，避けるようにすること．
+- `MYSQL_USER=root`としてしまうと　後述の`docker-compose`時に怒られるので，避けるようにすること．
+- `docker-compose.yml`と同じ階層で作成するようにこと
 
 ### Dockerを使えるかの確認
 
