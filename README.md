@@ -123,10 +123,16 @@ rails g controller {作成したいコントローラ名(複数形)}
 ```
 
 - マイグレーションファイルの作成
-    - 詳しい説明は[こちら](https://pikawaka.com/rails/migration)
-    
+  - 詳しい説明は[こちら](https://pikawaka.com/rails/migration)
+
 ```zsh
 rails g migration {マイグレーションのクラス名}
+```
+
+- MySQLへの接続
+
+```zsh
+rails db
 ```
 
 ### コンテナの外から操作
@@ -136,3 +142,8 @@ docker-compose run api {実行したRailsのコマンド}
 ```
 
 ## Rails APIについて
+
+### 基本的な操作
+
+> Railsで超簡単API  
+> <https://qiita.com/k-penguin-sato/items/adba7a1a1ecc3582a9c90>
