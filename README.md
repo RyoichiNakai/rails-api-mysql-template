@@ -80,12 +80,18 @@ docker-compose down
 
 ## Railsの操作
 
-### 初回`docker-compose up`時に必ず行うこと
+### `docker-compose up`初回実行時に必ず行うこと
 
 - DBの生成
 
 ```zsh
 rails db:create
+```
+
+- モジュールをインストール
+
+```zsh
+bundle install
 ```
 
 ### コンテナの中から操作
