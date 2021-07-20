@@ -4,6 +4,8 @@
 
 Rails6.0のAPIモードとMySQL5.7を接続するためのDockerテンプレート
 
+![image](https://user-images.githubusercontent.com/49640294/126355486-bbb7f883-c74b-4f6d-aff2-12c7bbc3fcf5.png)
+
 ## Docker環境構築&基本操作
 
 ### `.env`の作成
