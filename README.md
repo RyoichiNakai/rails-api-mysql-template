@@ -78,18 +78,21 @@ docker-compose down
 
 ## Railsの操作
 
-### コンテナの中から操作
+### 初回`docker-compose up`時に必ず行うこと
 
-- DBの生成（**初回`docker-compose up`時に必ず行うこと**）
+- DBの生成
 
 ```zsh
 rails db:create
 ```
 
+### コンテナの中から操作
+
 - サーバの起動
+  - `-b`で`0.0.0.0`をバインドしないと，コンテナ外からアクセスできない
 
 ```zsh
-rails s
+rails s -b 0.0.0.0
 ```
 
 - ルーティングの確認
