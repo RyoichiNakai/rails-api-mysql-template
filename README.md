@@ -146,4 +146,4 @@ docker-compose run api {実行したRailsのコマンド}
 ### 基本的な操作
 
 > Railsで超簡単API  
-> <https://qiita.com/k-penguin-sato/items/adba7a1a1ecc3582a9c90>
+> <https://qiita.com/k-penguin-sato/items/adba7a1a1ecc3582a9c9>
