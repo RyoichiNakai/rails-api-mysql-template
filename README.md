@@ -19,7 +19,7 @@ MYSQL_USER={MySQLユーザ名}
 MYSQL_PASSWORD={MySQLパスワード}
 ```
 
-- `MYSQL_USER=root`としてしまうと　後述の`docker-compose`時に怒られるので，避けるようにすること．
+- `MYSQL_USER=root`としてしまうと　後述の`docker-compose`時に怒られるので，避けるようにすること
 - `docker-compose.yml`と同じ階層で作成するようにこと
 
 ### Dockerを使えるかの確認
@@ -81,18 +81,12 @@ docker-compose down
 
 ## Railsの操作
 
-### `docker-compose up`初回実行時に必ず行うこと
+### 初回コンテナ立ち上げ時に必ず行うこと
 
-- DBの生成
+コンテナを立ち上げ、コンテナの中に入ってから以下のコマンドを実行して、MySQLとの接続を行う
 
 ```zsh
 rails db:create
-```
-
-- モジュールをインストール
-
-```zsh
-bundle install
 ```
 
 ### コンテナの中から操作
