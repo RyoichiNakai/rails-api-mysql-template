@@ -38,6 +38,8 @@ docker-compose -v
 brew install docker-compose
 ```
 
+※ Homebrewは事前にインストールしておいてください
+
 ### イメージをビルド
 
 api/Dockerfileを利用して，Ruby2.7環境のイメージを作成  
@@ -153,3 +155,45 @@ docker-compose run api {実行したRailsのコマンド}
 
 > Railsで超簡単API  
 > <https://qiita.com/k-penguin-sato/items/adba7a1a1ecc3582a9c9>
+
+## Rubocop
+
+RubocopはRubyのコード整形ツールで、以下のようにコードが汚い時は、指摘してくれたり、自動修正を行ってくれます
+
+![image](https://user-images.githubusercontent.com/49640294/126646341-6d961d6a-392e-4cc5-a8bd-da1af9890d0c.png)
+
+
+### 使用方法
+
+ローカル環境のターミナルで以下のコマンドを実行
+
+#### rbenvのインストール
+
+すでにインストールしている場合は、1つ目のコマンドのみ実行
+
+```zsh
+brew update && brew upgrade ruby-build
+brew install rbenv
+```
+
+#### local環境に`api/.ruby-version`と同じバージョンをインストール
+
+```zsh
+rbenv install 2.7.4
+rbenv global 2.7.4
+```
+
+### 必要なパッケージをインストール
+
+```zsh
+gem install rubocop
+gem install rubocop-performance
+gem install rubocop-rails
+```
+
+### VSCodeで以下のプラグインをインストール
+
+- Ruby
+- Ruby on Rails
+- endwise
+- ruby-rubocop
