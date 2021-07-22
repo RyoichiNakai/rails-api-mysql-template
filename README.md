@@ -156,20 +156,22 @@ docker-compose run api {実行したRailsのコマンド}
 > Railsで超簡単API  
 > <https://qiita.com/k-penguin-sato/items/adba7a1a1ecc3582a9c9>
 
-## Rubocop
+## RubocopとSolargraph
 
 RubocopはRubyのコード整形ツールで、以下のようにコードが汚い時は、指摘してくれたり、自動修正を行ってくれます
 
 ![image](https://user-images.githubusercontent.com/49640294/126646341-6d961d6a-392e-4cc5-a8bd-da1af9890d0c.png)
 
+またSolargraphはRubyのコード保管ツールです
 
 ### 使用方法
 
-ローカル環境のターミナルで以下のコマンドを実行
+Docker環境なので、ローカル環境のターミナルで以下のコマンドを実行し、2つのツールを使用
 
 #### rbenvのインストール
 
-すでにインストールしている場合は、1つ目のコマンドのみ実行
+すでにインストールしている場合は、1つ目のコマンドのみ実行  
+インストールしていない場合は、[こちら](https://qiita.com/Kodak_tmo/items/73147ed4f0eec54d6e94)に使い方が記載されています
 
 ```zsh
 brew update && brew upgrade ruby-build
@@ -189,6 +191,7 @@ rbenv global 2.7.4
 gem install rubocop
 gem install rubocop-performance
 gem install rubocop-rails
+gem install solargraph
 ```
 
 ### VSCodeで以下のプラグインをインストール
@@ -197,3 +200,4 @@ gem install rubocop-rails
 - Ruby on Rails
 - endwise
 - ruby-rubocop
+- Ruby Solargraph
