@@ -1,0 +1,18 @@
+{
+  "files.autoSave": "afterDelay",
+  "[ruby]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+  },
+  "ruby.format": "rubocop",
+  "ruby.rubocop.configFilePath": "/api/.rubocop.yml",
+  "ruby.useLanguageServer": true,
+  "rubocop.useBundler": false,
+  "solargraph.useBundler": false,
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "ruby.rubocop.onSave": true,
+  "editor.formatOnSaveTimeout": 5000
+}
