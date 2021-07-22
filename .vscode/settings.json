@@ -8,6 +8,8 @@
   "ruby.format": "rubocop",
   "ruby.rubocop.configFilePath": "/api/.rubocop.yml",
   "ruby.useLanguageServer": true,
+  "rubocop.useBundler": false,
+  "solargraph.useBundler": false,
   "ruby.lint": {
     "rubocop": true
   },
