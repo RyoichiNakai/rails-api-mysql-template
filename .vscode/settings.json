@@ -1,0 +1,16 @@
+{
+  "files.autoSave": "afterDelay",
+  "[ruby]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+  },
+  "ruby.format": "rubocop",
+  "ruby.rubocop.configFilePath": "/api/.rubocop.yml",
+  "ruby.useLanguageServer": true,
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "ruby.rubocop.onSave": true,
+  "editor.formatOnSaveTimeout": 5000
+}
